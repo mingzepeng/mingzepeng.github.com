@@ -8,6 +8,7 @@ CONFIG = {
   'version' => "0.3.0",
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
+  'pages' => File.join(SOURCE,"pages"),
   'post_ext' => "markdown"
 }
 
@@ -26,6 +27,39 @@ task :post do
     exit -1
   end
   filename = File.join(CONFIG['posts'], "#{date_format}-#{slug}.#{CONFIG['post_ext']}")
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts "date: #{date_format2}"
+    post.puts 'description: ""'
+    post.puts "categories: "
+    post.puts "tags: []"
+    post.puts "---"
+  end
+end # task :post
+
+desc "Create a new page in #{CONFIG['pages']}"
+
+task :page do
+  abort("rake aborted: '#{CONFIG['pages']}' directory not found.") unless FileTest.directory?(CONFIG['pages'])
+  title = ENV["title"] || "new-page"
+  tags = ENV["tags"] || "[]"
+  ext = ENV["page_ext"] || CONFIG['page_ext']
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  begin
+    date_format = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d-%H_%M_%S')
+    date_format2 = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d %H:%M:%S')
+  rescue => e
+    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    exit -1
+  end
+  filename = File.join(CONFIG['pages'], "#{slug}.#{ext}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
