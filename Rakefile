@@ -9,7 +9,7 @@ CONFIG = {
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
   'pages' => File.join(SOURCE,"pages"),
-  'post_ext' => "markdown"
+  'post_ext' => "md"
 }
 
 desc "Begin a new post in #{CONFIG['posts']}"
@@ -50,7 +50,7 @@ task :page do
   abort("rake aborted: '#{CONFIG['pages']}' directory not found.") unless FileTest.directory?(CONFIG['pages'])
   title = ENV["title"] || "new-page"
   tags = ENV["tags"] || "[]"
-  ext = ENV["page_ext"] || CONFIG['page_ext']
+  ext = ENV["page_ext"] || CONFIG['post_ext']
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date_format = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d-%H_%M_%S')
