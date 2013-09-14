@@ -10,7 +10,7 @@
   padding: 0;
 }
 */
-html, body { height: 100%; }
+html, body { height: 100%;background-color: #eee }
 
 /*body {
   background-color: #FFF;
@@ -34,6 +34,7 @@ table {
   font: 100%;
 }
 
+
 /*****************************************************************************/
 /*
 /* Home
@@ -45,7 +46,7 @@ ul.posts {
 }
 
 ul.posts li {
-  line-height: 1.75em;
+  line-height: 2em;
 }
 
 ul.posts span {
@@ -54,31 +55,49 @@ ul.posts span {
   font-size: 80%;
 }
 
+
 /*****************************************************************************/
 /*
 /* Site
 /*
 /*****************************************************************************/
-
-.site {
- 
+.container{
+  width: 800px;
+  background-color: white;
   text-align: justify;
-  width: 700px;
-  margin: 3em auto 2em;
+  margin: 1em auto ;
+  box-shadow: -3px 0 6px #aaa, 3px 0 6px #aaa;
+}
+/*.banner{background-color: #76D3DE; padding: 30px 0}*/
+.site {
   line-height: 2em;
+  padding: 2em 4em;
+  
+}
+
+.site .header{
+  margin-bottom: 1em;
 }
 
 .site .header a {
   font-weight: bold;
   text-decoration: none;
+  color: #aaa;
+  font-size: 1.1em;
+  margin-right: 1.1em;
+
+
 }
 
 .site .header h1.title {
-  display: inline-block;
+  display: block;
+  padding: .5em 0 1em 0 ;
 }
 
 .site .header h1.title a {
   color: #a00;
+  font-size: 1.1em;
+  margin-right: 1em;
 }
 
 .site .header h1.title a:hover {
@@ -86,8 +105,7 @@ ul.posts span {
 }
 
 .site .header a.extra {
-  color: #aaa;
-  margin-left: 1em;
+  color: #e62;
 }
 
 .site .header a.extra:hover {

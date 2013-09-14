@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "pqframe框架介绍"
 date: 2013-09-13 19:52:41
 description: ""

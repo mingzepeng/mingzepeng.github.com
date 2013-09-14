@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《javascript 高级程序设计》动态原型继承的一个错误"
+title: "读书：《javascript 高级程序设计》动态原型继承的一个错误"
 date: 2013-08-31 18:40:38
 description: ""
 categories: javascript

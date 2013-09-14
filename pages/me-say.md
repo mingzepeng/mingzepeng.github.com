@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "梓说"
 date: 2013-07-29 22:47:29
 description: ""

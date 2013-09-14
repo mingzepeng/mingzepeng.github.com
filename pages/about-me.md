@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "关于我"
 date:   2013-07-18 16:42:24
 categories: resume
