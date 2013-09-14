@@ -4,30 +4,12 @@
 /*
 /*****************************************************************************/
 
-/* Global Reset */
-/** {
-  margin: 0;
-  padding: 0;
-}
-*/
-html, body { height: 100%;background-color: #eee }
 
-/*body {
-  background-color: #FFF;
-  font: 13.34px "微软雅黑",Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
-}
+html, body { height: 100%; color: #555}
+body{background: #eee url("../imgs/bg.png") }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-*/
-/*h1 { margin-bottom: 1em; }*/
-/*p { margin: 1em 0; }*/
 
-a         { color: #09f; }
-/*a:hover   { color: #000; }
-a:visited { color: #a0a; }*/
+a{ color: #09f; }
 
 table {
   font-size: inherit;
@@ -42,7 +24,7 @@ table {
 /*****************************************************************************/
 ul.posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 ul.posts li {
@@ -52,7 +34,11 @@ ul.posts li {
 ul.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+  font-size: .8em;
+}
+
+ul.posts a.title {
+  font-size: 1.6em;
 }
 
 
@@ -62,85 +48,63 @@ ul.posts span {
 /*
 /*****************************************************************************/
 .container{
-  width: 800px;
+  width: 80%;
   background-color: white;
   text-align: justify;
-  margin: 1em auto ;
+  margin: 50px auto;
   box-shadow: -3px 0 6px #aaa, 3px 0 6px #aaa;
+  position: relative;
 }
-/*.banner{background-color: #76D3DE; padding: 30px 0}*/
-.site {
-  line-height: 2em;
-  padding: 2em 4em;
+
+header{
+  padding: 0.8em 3em;
+}
+header h1{
+  color: #a00;
   
+  font-size: 2em;
 }
 
-.site .header{
-  margin-bottom: 1em;
+nav{
+  background-color: #5593ca;
+  padding: 0 3em;
 }
-
-.site .header a {
+nav a {
   font-weight: bold;
   text-decoration: none;
-  color: #aaa;
-  font-size: 1.1em;
+  color: #F5F5F5;
+  font-size: 16px;
   margin-right: 1.1em;
-
-
+  display: inline-block;
+  padding: 0.5em 1em; ;
 }
 
-.site .header h1.title {
-  display: block;
-  padding: .5em 0 1em 0 ;
+nav a.extra,nav a:hover {
+background: #36638a;
+text-decoration: none;
 }
 
-.site .header h1.title a {
-  color: #a00;
-  font-size: 1.1em;
-  margin-right: 1em;
-}
 
-.site .header h1.title a:hover {
-  color: #000;
-}
+.content{ padding: 1em 3em;}
 
-.site .header a.extra {
-  color: #e62;
-}
-
-.site .header a.extra:hover {
-  color: #000;
-}
-
-.site .meta {
-  color: #aaa;
-  margin-bottom: 5px;
-}
-
-.site .footer {
-  font-size: 80%;
+footer {
+  font-size: 1em;
   color: #666;
   border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
+  padding: 1em 3em;
 }
 
-.site .footer .contact {
-  float: left;
-  margin-right: .5em;
-}
-
-.site .footer .contact a {
+footer .contact a {
   color: #8085C1;
 }
 
-.site .footer .rss {
+footer .rss {
   margin-top: 1.1em;
   margin-right: -.2em;
   float: right;
 }
 
-.site .footer .rss img {
+footer .rss img {
   border: 0;
 }
 
@@ -181,3 +145,5 @@ ul.posts span {
 .post pre.terminal code {
   background-color: #333;
 }
+
+.fork{position: fixed;right: 0;top: 0}

@@ -8,64 +8,61 @@
 
 
 
-
-
         <!-- typo CSS -->
-        <link rel="stylesheet" href="/assets/css/typo.css/typo.css">
-  
+        <link rel="stylesheet" href="/assets/css/typo.css/typo.reset.css" media="screen">
+        <link rel="stylesheet" href="/assets/css/typo.css/typo.css" media="screen">
+
+         <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css" media="screen">
           <!-- Custom CSS -->
-        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/main.css" media="screen">
               
         <!-- markdown CSS -->
        <!--  <link rel="stylesheet" href="/assets/css/markdown.css"> -->
        
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/assets/css/syntax.css">
-        <!-- Page CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+ 
+
        
     </head>
-    <body >
-
-      <div class="container">
-          <div class="banner">
-            
-          </div>
-          <div class="site">
-            <div class="header" id="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a>
-              </h1> 
-
+    <body>
+      <div class="container" id="container">
+            <header>
+              <h1>{{ site.name }}</h1> 
+            </header>
+              <nav>
               <a class="extra" href="/">主页</a>
 
-              <a href="{{site.url}}/pages/my-projects.html">我的项目</a>
+              <a href="{{site.url}}/pages/my-projects.html">作品</a>
 
               <a href="{{site.url}}/pages/me-say.html">梓说</a>
 
               <a href="{{site.url}}/pages/about-me.html">关于我</a> 
+              </nav>
+           
 
-            </div>
+          <div class="content typo typo-selection">
+
 
                 {{ content }}
 
-            <div class="footer">
-     
-              <div class="contact">
-                <p>
-                  <a href="mailto:mingzepeng@gmail.com">mingzepeng@gmail.com</a>
-                  <br />
-                  
-                </p>
-              </div>
-            </div>
+
                        <!--   <a href="http://weibo.com/u/1177119687?s=6uyXnP" target="_blank"><img border="0" src="http://service.t.sina.com.cn/widget/qmd/1177119687/95bc61d7/7.png"/></a> -->
           </div>
+            <footer>
+     
+              <div class="contact">
+                  <a href="mailto:mingzepeng@gmail.com">mingzepeng@gmail.com</a>              
+              </div>
+            </footer>
       </div>
-<a href="https://github.com/mingzepeng" id="fork" target="_blank">
+<a href="https://github.com/mingzepeng" class="fork" target="_blank">
     <img alt="Fork me on GitHub" src="{{url}}/assets/imgs/forkme_right_darkblue.png">
 </a>
     </body>
 </html>
+<script type="text/javascript">
+  
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -74,5 +71,22 @@
 
   ga('create', 'UA-41956630-1', 'mingzepeng.github.io');
   ga('send', 'pageview');
+
+  document.onscroll = function(event){
+    var scrollTop = document.body.scrollTop;
+    var nav = document.getElementsByTagName('nav')[0];
+    var container = document.getElementById('container');
+    var width = container.clientWidth;
+    var style = container.currentStyle ? container.currentStyle : window.getComputedStyle(nav, null);
+    if(scrollTop > 250) {
+      nav.style.position = 'fixed';
+      nav.style.width = (width - parseInt(style.paddingLeft) - parseInt(style.paddingRight) ) + 'px'
+      nav.style.top = "0px"
+    }else{
+
+      nav.style.position = 'static'
+      nav.style.width = 'auto'
+    }
+  }
 
 </script>
