@@ -2,14 +2,14 @@
 layout: post
 title: "读书：《javascript 高级程序设计》动态原型继承的一个错误"
 date: 2013-08-31 18:40:38
-description: ""
+description: "javascript 继承 原型"
 categories: javascript
 tags: []
 ---
 
 这是我在复习《javascript 高级程序设计》时候发现的一个问题，书里面讲得不是很易懂，于是我自己查阅了一下资料，了解了一下。以下代码是书中提到的利用动态原型实现继承的一个例子，并说这个例子是有缺陷的，问题代码在以下代码中注释特别标出来的那行的。
 
-{% highlight javascript  linenos  %}
+{% highlight  javascript linenos  %}
 function Polygon(iSides) {
     this.sides  = iSides;
     if(typeof Polygon.__init__  === "undefined")
