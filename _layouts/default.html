@@ -8,7 +8,6 @@
       <!--[if IE]>
          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
-
         <!-- typo CSS -->
         <link rel="stylesheet" href="/assets/css/typo.css/typo.reset.css" media="screen">
         <link rel="stylesheet" href="/assets/css/typo.css/typo.css" media="screen">
@@ -63,7 +62,17 @@
     </body>
 
 </html>
-<script type="text/javascript" src="{{site.url}}/assets/js/main.js"></script>
+<script type="text/javascript" src="{{site.url}}/assets/modules/seajs/sea.js"></script>
+<!-- <script type="text/javascript" src="{{site.url}}/assets/js/main.js"></script> -->
+<script type="text/javascript">
+seajs.config({
+  base : '/assets/modules',
+  alias : {
+    'base' : 'base/base.js'
+  }
+})
+seajs.use('/assets/js/main.js')
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
