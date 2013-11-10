@@ -26,7 +26,7 @@ define(function(require){
         if (scrollTop > nav.scrollTop + nav.clientHeight) {
             if (flag) return true;
             nav.style.position = 'fixed';
-            nav.style.width = (width - parseInt(parsePx(nav, 'paddingLeft')) - parseInt(parsePx(nav, 'paddingRight'))) + 'px'
+            nav.style.width = (width - parseInt(cssKit.parsePx(nav, 'paddingLeft')) - parseInt(cssKit.parsePx(nav, 'paddingRight'))) + 'px'
             nav.style.top = "0px"
             flag = true;
         } else {
