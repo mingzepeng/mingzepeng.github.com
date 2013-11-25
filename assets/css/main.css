@@ -6,7 +6,7 @@
 
 
 html, body { height: 100%; color: #555}
-body{background: #eee url("../imgs/bg.png") ; padding-top:3em; text-shadow: 0.1px 0.1px 0.5px grey;}
+body{background: #eee url("../imgs/bg.png"); text-shadow: 0.1px 0.1px 0.5px grey;}
 
 
 a{ color: #09f; }
@@ -17,28 +17,20 @@ table {
 }
 
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-ul.posts {
+
+.posts {
   list-style-type: none;
   margin-bottom: 1em;
 }
 
-ul.posts li {
+.posts article {
   line-height: 2em;
 }
 
-ul.posts span {
+.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: .8em;
-}
-
-#home ul.posts a.title {
-  font-size: 1.6em;
 }
 
 
@@ -55,6 +47,7 @@ ul.posts span {
   margin: 0px auto;
   box-shadow: -3px 0 6px #aaa, 3px 0 6px #aaa;
   position: relative;
+  top: 3em;
 
 }
 
@@ -129,7 +122,7 @@ nav a:focus::after {
 }*/
 
 
-.content{ padding: 1em 3em;}
+.content{ padding: 1em 2em;}
 
 article h2{ color: #09f}
 

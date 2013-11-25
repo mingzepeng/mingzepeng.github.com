@@ -6,15 +6,16 @@ title: 茗梓小栈
 article{ margin-bottom: 1em; border-bottom: 1px solid #ddd}
 </style>
 <div id="home">
-  <ul class="posts">
+  <div class="posts">
     {% for post in site.posts %}
-      <li>
-		<a class="title" href="{{ post.url }}">{{ post.title }}</a> &raquo; 
-      	<span>{{ post.date | date: "%Y-%m-%d" }}</span> 
+      
+
       	<article class="post">
+             <h2> <a class="title" href="{{ post.url }}">{{ post.title }}</a> </h2>&raquo; 
+              <span>{{ post.date | date: "%Y-%m-%d" }}</span> 
       		{{post.content}}
       	</article>
-      </li>
+      
     {% endfor %}
-  </ul>
+  </div>
 </div>
