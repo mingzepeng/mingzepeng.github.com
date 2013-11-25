@@ -6,13 +6,3 @@ layout: default
 {{ content }}
 </article>
 <p class="meta">{{ page.date | date: "%Y-%m-%d" }}</p>
-<script type="text/javascript">
-	var nav = document.getElementsByTagName('nav')[0];
-	var links = nav.getElementsByTagName('a');
-	var url = location.href;
-	var page = url.slice(url.lastIndexOf('/')+1);
-	for(var i = links.length-1; i>=0 ; i--){
-		links[i].className = '';
-		if(links[i].href.indexOf(page) > 0) links[i].className = 'extra'
-	}
-</script>

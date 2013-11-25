@@ -3,21 +3,9 @@ define(function(require){
     var cssKit = require('style/cssKit')
 
     var nav = document.getElementsByTagName('nav')[0];
-    var links = nav.getElementsByTagName('a');
-
-
-    var nav = document.getElementsByTagName('nav')[0];
     var container = document.getElementById('container');
     var flag = false;
 
-    var url = location.href;
-    var page = url.slice(url.lastIndexOf('/') + 1);
-    if (page) {
-        for (var i = links.length - 1; i >= 0; i--) {
-            links[i].className = '';
-            if (links[i].href.indexOf(page) > 0) links[i].className = 'extra'
-        }
-    }
     base.addEvent(window,'scroll',function(event){
         var scrollTop = document.body.scrollTop > 0 ? document.body.scrollTop : document.documentElement.scrollTop;
         var width = container.clientWidth;
@@ -34,7 +22,7 @@ define(function(require){
             nav.style.position = 'static'
             nav.style.width = 'auto'
             flag = false;
-        }        
+        } 
     });
 
     base.addEvent(window,'resize',function(){
