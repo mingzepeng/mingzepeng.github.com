@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "关于我"
-date:   2013-07-18 16:42:24
+date:   2016-01-12
 categories: resume
 ---
 ![my avatar](../assets/imgs/avatar.gif")
