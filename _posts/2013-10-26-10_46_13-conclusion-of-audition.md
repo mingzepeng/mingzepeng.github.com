@@ -18,14 +18,12 @@ tags: []
 1 引起内存泄漏最经典的例子，自循环引用`var a = Array(1);a[0] = a`,这个在比较旧的浏览器中，特别是ie，会引起内存的泄漏。
 
 2 见以下代码,这种方式会在旧版的ie下引发内存的泄漏，其中我提到这个，但是面试官又问我，这个到底是内存泄漏还是内存积累，我也无言以对。
-{% highlight  javascript linenos  %}
+{% highlight  javascript   %}
 function Foo()
 {
 	var p = document.createElement('p');
 }
 Foo();
-
-
 {% endhighlight %}
 
 接着下面再提到一些的问题

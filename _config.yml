@@ -1,3 +1,4 @@
 name: 茗梓小栈
-pygments: true
+highlighter: rouge
+# pygments: true
 markdown: rdiscount
