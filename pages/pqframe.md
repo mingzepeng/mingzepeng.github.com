@@ -21,3 +21,4 @@ tags: []
 
 这是github的地址：[pqframe](https://github.com/mingzepeng/pqframe)，目前仍然在维护，添加一些小功能，修复一些bug。
 
+更新于2016年1月31日，目前已经不再维护这个框架了，^_^。
